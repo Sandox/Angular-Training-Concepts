@@ -1,0 +1,11 @@
+<p> Can be able to add New server:  {{allowNewServer}}</p>
+
+<label> Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p> {{ serverName }} </p>
+
+<button class="btn btn-primary"
+  [disabled]="!allowNewServer" (click)="onServerCreateStatus()">Add Server</button><br/>
+<hr/>
+
+<p> {{ serverCreationStatus }} </p>

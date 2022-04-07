@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="cols-xs-12">
+      <button class="btn btn-primary" (click)="isOnlyOddNumers = !isOnlyOddNumers"> Toggle Type of Numbers </button>
+    </div><br/><br/>
+  <ul class="list-group">
+    <div *ngIf="isOnlyOddNumers">
+      <li class="list-group-item"
+          [ngClass]="{isOdd: odd % 2 !== 0}"
+          [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'pink' : 'transparent' }"
+          *ngFor="let odd of oddNumbers">
+          {{ odd }}
+      </li>
+    </div>
+    <div *ngIf="!isOnlyOddNumers">
+    <li class="list-group-item"
+        [ngClass]="{isOdd: even % 2 !== 0}"
+        [ngStyle]="{backgroundColor:  even % 2 !== 0 ? 'pink' : 'transparent' }"
+        *ngFor="let even of evenNumbers">
+      {{ even }}
+    </li>
+    </div>
+  </ul>
+</div><br/>
+  <div>
+    <p appBasicHighlighter> This is the highlighter directive</p>
+    <p appBetterHighlight> This is the Renderer Director Through Angular</p>
+  </div>
+
+</div>

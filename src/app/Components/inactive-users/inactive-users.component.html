@@ -1,0 +1,10 @@
+<hr/>
+<div class="row">
+  <h2>Inactive Users</h2>
+  <br>
+  <div class="cols-xs-12" *ngFor="let user of users; let x = index">
+    <h4>Name: {{ user }}</h4>
+    <button class="btn btn-success" (click)="onSetUserToActive(x)">Switch to Active</button>
+  </div>
+
+</div>

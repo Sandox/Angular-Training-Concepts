@@ -1,0 +1,18 @@
+<!-- Input that updates a Username Property
+     Output the Username property in a paragraph tag
+     Add a button that can only be clickable if username is not empty string
+     After button is clicked the Username property must be set be to empty string-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label for="username">Username</label>
+      <input type="text" name="username" class="form-control" [(ngModel)]="username"><br/>
+      <p> {{ username }} </p>
+      <br/>
+      <button class="btn btn-warning" [disabled]="username === '' " (click)="onResetUser()" >Reset Username</button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,19 @@
+<!-- 1. Add a Button which says Display Details
+     2. Add a paragraph tag with any content like: ('Nickname = Hulk)
+     3. Toggle the display of the paragraph when button is clicked
+     4. Log all button clicks in an array and output the array on the paragraph tag
+     5. Starting at Item 5 in the array, give all future or additional items to be added
+        give them a blue background and white text color-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <button class=" btn btn-success" (click)="onToggleDetails()">Display Details</button>
+        <p *ngIf="showNickname">Nickname = Hulk</p>
+        <div *ngFor="let logItem of log"
+             [ngStyle]=" {backgroundColor: logItem >= 5 ? 'blue' : 'transparent'} "
+             [ngClass]=" {'white-text' : logItem >= 5} "
+        >Button Clicks: {{ logItem }} </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <h4 *ngIf="!allowEdit">No Role Acquired in order to work on Edit Functionality</h4>
+  <div *ngIf="allowEdit">
+    <div class="row">
+      <div class="col-xs-12">
+        <label>User Name:</label>
+        <input type="text" class="form-control" placeholder="Username" ngModel="name">
+      </div>
+      <button type="button" class="btn btn-primary">Update Name</button>
+    </div>
+  </div>
+
+</div>
