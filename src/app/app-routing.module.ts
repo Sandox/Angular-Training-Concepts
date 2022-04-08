@@ -11,6 +11,7 @@ import {NewAccountComponent} from "./Components/new-account/new-account.componen
 import {PracticeBindingsComponent} from "./Components/practice-bindings/practice-bindings.component";
 import {TemplateDrivenComponent} from "./Components/forms/template-driven/template-driven.component";
 import {ReactiveFormsComponent} from "./Components/forms/reactive-forms/reactive-forms.component";
+import {WorkingPipesComponent} from "./Components/Pipes/working-pipes/working-pipes.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'bindings', component:PracticeBindingsComponent},
   {path:'template-forms', component:TemplateDrivenComponent},
   {path:'reactive-forms', component:ReactiveFormsComponent},
+  {path:'student', component:WorkingPipesComponent},
   { path: 'not-found', component: NothingComponent },
   { path: '**', redirectTo:'/not-found' },
 

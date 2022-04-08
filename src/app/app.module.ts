@@ -32,6 +32,9 @@ import { EditUsersComponent } from './Components/Routing-application-examples/ed
 import { ObservablesComponent } from './Components/observables/observables.component';
 import { TemplateDrivenComponent } from './Components/forms/template-driven/template-driven.component';
 import { ReactiveFormsComponent } from './Components/forms/reactive-forms/reactive-forms.component';
+import { WorkingPipesComponent } from './Components/Pipes/working-pipes/working-pipes.component';
+import { ShortenPipe } from './shared/shorten.pipe';
+import { FilterPipe } from './shared/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ReactiveFormsComponent } from './Components/forms/reactive-forms/reacti
     EditUsersComponent,
     ObservablesComponent,
     TemplateDrivenComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    WorkingPipesComponent,
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
