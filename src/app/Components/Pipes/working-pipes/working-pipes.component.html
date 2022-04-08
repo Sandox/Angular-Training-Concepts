@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm10 col-md-8 col-xs-offset-1 col-md-offset-2">
+      <input type="text" class="form-control" [(ngModel)]="filteredStatus">
+      <hr/>
+      <ul class="listgroup">
+        <li class="list-group-item"
+            *ngFor=" let user of students | filter: filteredStatus: 'status' "
+            [ngClass]="getStatusClass(user)">
+          <strong>{{ user.name | uppercase }}</strong> | {{ user.course | shorten: 15}} | {{ user.started | date:'longDate' | uppercase}}
+          <span class="badge">{{ user.status }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--
+<div>{{user. birthDate | date:’short’}}  <!- will display [5/10/96, 12 AM] on the screen></div>
+
+<div>{{user. birthDate | date:’longDate’}}  <!- will display [May 10 1996 ] on the screen> </div>
+
+<div>{{user. birthDate | date:’mmm dd yyyy}}  <!- will display [May 10 1996 ] on the screen> </div> -->
